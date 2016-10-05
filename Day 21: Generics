@@ -1,0 +1,7 @@
+/* https://www.hackerrank.com/challenges/30-generics */
+
+    public static void printArray<T>(T[] input)
+{
+    foreach(T value in input)
+    	Console.WriteLine(value);
+}
