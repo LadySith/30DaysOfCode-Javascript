@@ -1,0 +1,22 @@
+/* */
+
+    public Difference(int[] array)
+        {
+        elements = array;
+    }
+
+    public void computeDifference()
+        {
+        int max = -999;
+        int min = 999;
+        
+        for (int i = 0; i < elements.Length; i++)
+            {
+            if (elements[i] < min)
+                min = elements[i];
+            if (elements[i] > max)
+                max = elements[i];
+        }
+        
+        maximumDifference = Math.Abs(max - min);
+    }
