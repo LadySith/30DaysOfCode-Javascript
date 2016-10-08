@@ -1,0 +1,19 @@
+/* https://www.hackerrank.com/challenges/30-linked-list-deletion */
+
+  public static Node removeDuplicates(Node head){
+    //Write your code here
+      Node cur = head;
+      Node ptr = head.next;
+      while (cur.next != null)
+          {
+          if (cur.data == (cur.next).data)
+              {
+              cur.next = ptr.next;
+              ptr.next = null;
+              ptr = cur.next;
+          }
+          cur = cur.next;
+          ptr = ptr.next;
+      }
+      return head;
+  }
