@@ -1,0 +1,21 @@
+/* https://www.hackerrank.com/challenges/30-binary-search-trees */
+
+	static int getHeight(Node root){
+      //Write your code here
+        
+        if (root == null)
+            return -1;
+        else
+        {
+            int leftHeight = getHeight(root.left);
+            int rightHeight = getHeight(root.right);
+            return (1 + Max(leftHeight,rightHeight));
+        }
+    }
+
+    public static int Max(int a, int b){
+        if (a - b > 0 || a == b)
+            return a;
+        else return b;
+    }
+  
